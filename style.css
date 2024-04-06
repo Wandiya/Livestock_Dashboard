@@ -73,6 +73,12 @@
   widows: 100%;
   list-style: none;
 }
+.sidebar ul li:hover{
+  background: #fff;
+}
+.sidebar ul li:hover a{
+  color: #299863;
+}
 .sidebar ul li a{
   width: 100%;
   text-decoration: none;
@@ -112,7 +118,18 @@
   border-radius: 10px;
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, alpha 0.08);
 }
-
+.cards .card:hover{
+background: #299063;
+}
+.cards .card:hover .number{
+   color: #fff; 
+}
+.cards .card:hover .card-name{
+  color: #fff;
+}
+.cards .card:hover .icon-box i{
+  color: #fff;
+}
 .number{
   font-size: 30px;
   font-weight: 500;
@@ -145,3 +162,67 @@
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   width: 100%;
  }
+ .chart h2{
+  margin-top: 5px;
+  font-size: 20px;
+  color: #666;
+  text-align: center;
+
+ }
+
+ /* responsive starts here  */
+  @media (max-width: 1115px) {
+    .sidebar{
+      width: 60px;
+    }
+    .main{
+      left: 60px;
+      width: calc(100%-60px);
+    }
+  }
+  @media (max-width: 800px){
+    .cards{
+      grid-template-columns: repeat(2, 1fr); 
+      
+    }
+    .charts{
+      grid-template-columns:1fr;
+    
+     }
+     #doughnut-chart{
+      padding: 50px;
+     }
+     #doughnut{
+      padding: 50px;
+     }
+  }
+  @media (max-width: 500px){
+    .topbar{
+      grid-template-columns: 1fr 5fr 0.4fr 1fr;
+    }
+    .cards{
+      grid-template-columns: 1fr;
+    }
+    .logo h2{
+      font-size: 20px;
+    }
+    .search{
+      width: 80%;
+    }
+    .search input{
+      padding: 0 20px;
+    };
+    .fa-bell{
+      margin-top: 5px;
+    }
+    .user{
+      width: 40px;
+      height: 40px;
+    }
+    #doughnut-chart{
+      padding: 10px;
+    }
+    #doughnut{
+      padding: 0;
+    }
+  }
